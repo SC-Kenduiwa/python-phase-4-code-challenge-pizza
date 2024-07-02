@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from models import db, Restaurant, RestaurantPizza, Pizza
 from flask_migrate import Migrate
 from flask import Flask, request, make_response
@@ -13,17 +12,15 @@ app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
 
-migrate = Migrate(app, db)
 
-db.init_app(app)
+# migrate = Migrate(app, db)
+# db.init_app(app)
 
-api = Api(app)
-
+# api = Api(app)
 
 @app.route("/")
 def index():
     return "<h1>Code challenge</h1>"
-
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)
