@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import logo from "../logo.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../logo.png'; 
 
 function Navbar() {
   return (
@@ -10,6 +11,9 @@ function Navbar() {
       </div>
       <nav>
         <Link to="/">Home</Link>
+        <Link to="/restaurants">Restaurants</Link>
+        <Link to="/pizzas">Pizzas</Link>
+        <Link to="/restaurant-pizzas">Restaurant Pizzas</Link>
       </nav>
     </header>
   );
